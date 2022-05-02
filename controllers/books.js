@@ -6,6 +6,6 @@ module.exports = {
 
 function index(req, res) {
     Book.find({}, function(err, books) {
-      res.render('books/index', { title: 'All Books', books });
+      res.render('books/index', { title: 'World Of Wonders', books });
     });
   }
