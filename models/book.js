@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const bookSchema = new Schema({
     title: String,
     author: String,
-    details: String,
-    price: {type:Number, default:5},
+   
+    price: {type:Number, min:1, max:9999, default:5}
     //reviews: [reviewSchema]
 
 },{

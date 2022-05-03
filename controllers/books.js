@@ -1,7 +1,8 @@
 const Book = require('../models/book');
 
 module.exports = {
-    index
+    index,
+    new:newBook
 }
 
 function index(req, res) {
@@ -9,3 +10,7 @@ function index(req, res) {
       res.render('books/index', { title: 'World Of Wonders', books });
     });
   }
+
+function newBook(req, res){
+    res.render('books/new', {title: 'Add Book' });
+}
