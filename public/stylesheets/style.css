@@ -72,3 +72,18 @@ nav > a.active {
 #list{
   font-size: 40px;
 }
+#showpage {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  
+}
+
+#showpage div{
+  color:darkseagreen;
+  font-size: 30px;
+}
+
+#showpage div:nth-child(even) {
+  font-weight: bold;
+}
