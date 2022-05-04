@@ -4,7 +4,8 @@ module.exports = {
     index,
     new:newBook,
     create,
-    show
+    show,
+    shop
 }
 
 function index(req, res) {
@@ -38,4 +39,7 @@ function show(req, res){
         });
         
     });
+}
+function shop(req, res){
+    res.render('books/shop', {title: 'ADD TO CART'});
 }

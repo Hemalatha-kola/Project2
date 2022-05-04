@@ -8,7 +8,9 @@
     <div><%= book.author %></div> 
     <div>Cost:</div>
      <div><%= book.price %></div> 
-   <div> <a href="/books/<%= book._id %>/shops"><button>ADD TO CART</button></a></div> 
+     <form action="/books/<%= book._id %>/shop" method="POST">
+        <button type="submit">ADD TO CART</button>
+      </form>
 </section>
 
 
