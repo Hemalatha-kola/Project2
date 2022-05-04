@@ -8,10 +8,11 @@
     <div><%= book.author %></div> 
     <div>Cost:</div>
      <div><%= book.price %></div> 
-     <form action="/books/<%= book._id %>/shop" method="POST">
-        <button type="submit">ADD TO CART</button>
-      </form>
+     <a href="/books/<%= book._id %>/shop"><button>ADD TO CART</button></a>
+     
 </section>
+
+
 
 
 <br><br>
@@ -71,5 +72,7 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
+
+
 
 <%- include('../partials/footer') %>

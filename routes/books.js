@@ -9,7 +9,8 @@ router.get('/', booksCtrl.index);
 router.get('/new', isLoggedIn, booksCtrl.new);
 router.post('/', isLoggedIn, booksCtrl.create);
 router.get('/:id', isLoggedIn, booksCtrl.show);
-router.get('/shop', isLoggedIn, booksCtrl.shop);
+router.get('/', booksCtrl.shopBook)
+
 
 
 

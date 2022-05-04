@@ -5,7 +5,7 @@ module.exports = {
     new:newBook,
     create,
     show,
-    shop
+    shopBook
 }
 
 function index(req, res) {
@@ -40,6 +40,13 @@ function show(req, res){
         
     });
 }
-function shop(req, res){
-    res.render('books/shop', {title: 'ADD TO CART'});
+function shopBook(req, res){
+    Book.findById(req.params.id, function(err, book){
+        
+        res.render('books/shop',{
+            title: 'SHOPPING CART', book
+        
+        });
+        
+    });
 }
