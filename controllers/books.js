@@ -47,10 +47,10 @@ function show(req, res){
 }
 
 function createshop(req, res){
-    const shop = new Book(req.body);
-    shop.save(function(err){
+    const book = new Book(req.body);
+    book.save(function(err){
         if(err) return res.redirect('/books');
-        res.redirect(`/books/${shop._id}/shop`);
+        res.redirect(`/books/${book._id}/shop`);
     })
 }
 
