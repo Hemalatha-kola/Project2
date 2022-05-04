@@ -11,7 +11,7 @@ router.post('/', isLoggedIn, booksCtrl.create);
 router.get('/:id', isLoggedIn, booksCtrl.show);
 
 router.post('/shop', booksCtrl.createshop);
-router.get('books/:id', booksCtrl.shopBook);
+router.get('/:id', booksCtrl.shopBook);
 
 
 
