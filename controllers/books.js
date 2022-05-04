@@ -5,6 +5,7 @@ module.exports = {
     new:newBook,
     create,
     show,
+    createshop,
     shopBook
 }
 
@@ -28,7 +29,11 @@ function create(req, res){
         if (err) return res.redirect('/books/new');
         res.redirect(`/books/${book._id}`);
     });
+   
+
 }
+
+
 
 function show(req, res){
     Book.findById(req.params.id, function(err, book){
@@ -40,6 +45,15 @@ function show(req, res){
         
     });
 }
+
+function createshop(req, res){
+    const shop = new Book(req.body);
+    shop.save(function(err){
+        if(err) return res.redirect('/books');
+        res.redirect(`/books/${shop._id}/shop`);
+    })
+}
+
 function shopBook(req, res){
     Book.findById(req.params.id, function(err, book){
         
