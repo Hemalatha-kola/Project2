@@ -18,6 +18,10 @@ function newBook(req, res){
 }
 
 function create(req, res){
+
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+      }
     const book = new Book(req.body);
     book.save(function(err){
         if (err) return res.redirect('/books/new');
