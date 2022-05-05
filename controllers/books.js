@@ -8,7 +8,8 @@ module.exports = {
     create,
     show,
     createShop,
-    shopBook
+    shopBook,
+    
 }
 
 function index(req, res) {
@@ -75,5 +76,18 @@ function shopBook(req, res){
         
    
 }
+// function update(req, res) {
+//     Book.findOneAndUpdate(
+//       {_id: req.params.id, user:req.user._id},
+//       req.body,
+//       {new: true},
+     
+//       function(err, book) {
+        
+//         if (err || !book) return res.redirect('/books');
+//         res.redirect(`/books/${book._id}`);
+//       }
+//     );
+//   }
 
 

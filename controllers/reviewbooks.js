@@ -30,10 +30,9 @@ function create(req, res){
 // function update(req, res) {
 //   // Note the cool "dot" syntax to query on the property of a subdoc
 //   Book.findOne({'reviews._id': req.params.id}, function(err, book) {
-//     // Find the comment subdoc using the id method on Mongoose arrays
-//     // https://mongoosejs.com/docs/subdocs.html
+//     console.log("+++++++++", reviews._id);
 //     const commentSubdoc = book.reviews.id(req.params.id);
-//     // Ensure that the comment was created by the logged in user
+   
 //     if (!commentSubdoc.userId.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
 //     // Update the text of the comment
 //     commentSubdoc.reviewtext = req.body.reviewtext;

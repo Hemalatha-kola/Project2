@@ -1,17 +1,18 @@
 
 <%- include('../partials/header') %>
-<section>
+<section id="shopCart">
     
 <div>Title:</div>
   <div> <% shop.forEach(function (b){ %>
         <tr> 
-            <td><%= b %></td>
+            <td><%= b.Title %></td>
         </tr>
  <% }); %></div>
   
     
     <div>Cost:</div>
   <div><%= shop.price %></div>
+  <a href="/logout">CHECK OUT</a>
   <%= console.log(shop) %>
     </form>
     </section>

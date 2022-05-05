@@ -61,16 +61,54 @@ nav > a.active {
   cursor: default;
 }
 
-#new-form {
+#newform {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
+ 
+}
+#newform > label{
+  font-size: 30px;
+  color:aqua;
 }
 .header{
   font-size: 60px;
 }
 #list{
   font-size: 40px;
+}
+
+table {
+  font-size: 20px;
+}
+
+table thead th {
+  padding: 5px;
+  border-bottom: 2px solid #424748;
+  color:blueviolet;
+  font-size:30px;
+}
+
+table td {
+  padding: 10px;
+  text-align: center;
+  color:aqua;
+}
+
+#list td:nth-child(2), #list td:nth-child(3){
+  min-width: 100px;
+}
+
+#list a {
+  border-radius: 4px;
+  background-color: #B8C0C2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: white;
 }
 #showpage {
   display: grid;
@@ -80,10 +118,66 @@ nav > a.active {
 }
 
 #showpage div{
-  color:darkseagreen;
+  color:aqua;
   font-size: 30px;
 }
 
 #showpage div:nth-child(even) {
   font-weight: bold;
+}
+
+#shopCart  div{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#shopCart div{
+  color:rgb(104, 210, 139);
+  font-size: 30px;
+}
+#add-review-form{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+  
+}
+#add-review-form > label{
+  color: rgb(83, 201, 72);
+  font-size: 30px;
+}
+#add-review-form input[type="submit"]
+  {
+  width: 10rem;
+  grid-column: 2 / 3;
+  color: rgb(83, 201, 72);
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+	
+li {
+  font-weight: bold;
+}
+
+hr {
+  color: #424748
+}
+
+
+
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
 }

@@ -9,6 +9,6 @@ router.get('/', booksCtrl.index);
 router.get('/new', isLoggedIn, booksCtrl.new);
 router.post('/', isLoggedIn, booksCtrl.create);
 router.get('/:id', isLoggedIn, booksCtrl.show);
-
+//router.put('/', booksCtrl.update);
 
 module.exports = router;
