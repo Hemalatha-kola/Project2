@@ -1,11 +1,13 @@
+const { find } = require('../models/book');
 const Book = require('../models/book');
+const Shop = require('../models/shop');
 
 module.exports = {
     index,
     new:newBook,
     create,
     show,
-    createshop,
+    createShop,
     shopBook
 }
 
@@ -46,21 +48,30 @@ function show(req, res){
     });
 }
 
-function createshop(req, res){
-    const book = new Book(req.body);
-    book.save(function(err){
+function createShop(req, res ){
+    console.log("+++++++++")
+    
+        const cart = new Shop(req.body);
+ //cart.books.push(req.body)
+   cart.save(function(err){
         if(err) return res.redirect('/books');
-        res.redirect(`/books/${book._id}/shop`);
-    })
+        res.redirect(`/shop`);
+    });
+
 }
 
 function shopBook(req, res){
-    Book.findById(req.params.id, function(err, book){
-        
-        res.render('books/shop',{
-            title: 'SHOPPING CART', book
+    console.log("#######", )
+   Shop.find({}).populate(`books.body`).exec(function(err, shop){
+    console.log("heloo+++++++", shop);
+    res.render('books/shop',{
+        title: 'SHOPPING CART', shop
+   })
+       
         
         });
         
-    });
+   
 }
+
+

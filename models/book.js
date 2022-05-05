@@ -11,12 +11,15 @@ const reviewSchema = new Schema({
     timestamps:true
 })
 
+
+
 const bookSchema = new Schema({
     title: String,
     author: String,
    
     price: {type:Number, min:1, max:9999, default:5},
     reviews: [reviewSchema]
+   
 
 },{
     timestamps:true

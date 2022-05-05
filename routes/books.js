@@ -10,11 +10,4 @@ router.get('/new', isLoggedIn, booksCtrl.new);
 router.post('/', isLoggedIn, booksCtrl.create);
 router.get('/:id', isLoggedIn, booksCtrl.show);
 
-router.post('/shop', booksCtrl.createshop);
-router.get('/:id', booksCtrl.shopBook);
-
-
-
-
-
 module.exports = router;

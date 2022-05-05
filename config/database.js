@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const db = mongoose.connection;
 
-//mongoose.connect('process.env.DATABASE_URL', {
- //  useNewUrlParser: true,
+//mongoose.connect('mongodb://localhost/samplebooks', {
+  //useNewUrlParser: true,
     //useUnifiedTopology: true
 //});
 

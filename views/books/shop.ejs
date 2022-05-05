@@ -1,11 +1,18 @@
 
 <%- include('../partials/header') %>
 <section>
+    
 <div>Title:</div>
-  <div><%= book.title %></div> 
-   <div>Author:</div>
-    <div><%= book.author %></div> 
+  <div> <% shop.forEach(function (b){ %>
+        <tr> 
+            <td><%= b %></td>
+        </tr>
+ <% }); %></div>
+  
+    
     <div>Cost:</div>
-     <div><%= book.price %></div> 
+  <div><%= shop.price %></div>
+  <%= console.log(shop) %>
+    </form>
     </section>
   <%- include('../partials/footer') %>

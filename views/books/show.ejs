@@ -8,7 +8,7 @@
     <div><%= book.author %></div> 
     <div>Cost:</div>
      <div><%= book.price %></div> 
-     <a href="/books/<%= book._id %>/shop"><button>ADD TO CART</button></a>
+     <a href="/books/<%= book._id %>/shops"><button>ADD TO CART</button></a>
      
 </section>
 
@@ -60,6 +60,12 @@
               <button type="submit">X</button>
             </form>
           <% } %>
+          <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+            <!-- Value attribute is being set to the comment's current text -->
+            <input name="reviewtext" value="<%= r.reviewtext%>">
+            <input name="rating" value="<%= r.rating%>">
+            <button type="submit">UPDATE COMMENT</button>
+          </form>
         </td>
       </tr>
     <% }); %>

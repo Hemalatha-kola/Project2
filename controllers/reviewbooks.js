@@ -16,6 +16,19 @@ function create(req, res){
     });
 }
 
+function update(req, res) {
+  Book.findOneAndUpdate(
+    {_id: req.params.id, userRecommending: req.user._id},
+ 
+    req.body,
+   
+    {new: true},
+    function(err, book) {
+      if (err || !book) return res.redirect('/books');
+      res.redirect(`/books/${book._id}`);
+    }
+  );
+}
 
 function deleteReview(req, res, next) {
     // Note the cool "dot" syntax to query on the property of a subdoc
@@ -42,5 +55,6 @@ function deleteReview(req, res, next) {
 
 module.exports = {
     create,
-    delete: deleteReview
+    delete: deleteReview,
+    update
     }
