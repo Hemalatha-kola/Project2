@@ -85,8 +85,11 @@ table {
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
-  color:blueviolet;
-  font-size:30px;
+  color:orange;
+  font-size: 40px;
+}
+#user th{
+  color:rgb(233, 75, 202);
 }
 
 table td {
