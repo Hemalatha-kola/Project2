@@ -1,4 +1,4 @@
-# Books Review API
+# Books Reviews API
 
 ### Site Functionality
 Books Review is a place where User can add their favorite Books list to the site, and see other people review and rate the books. All User can view the reviews and rating of a book, but the one who pass reviews will have access to delete . 
