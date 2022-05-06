@@ -158,13 +158,13 @@ table td {
 
 #shopCart  div{
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;;
 }
 
 #shopCart div{
   color:rgb(104, 210, 139);
-  font-size: 30px;
+  font-size: 40px;
 }
 
 #shopCart button{

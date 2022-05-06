@@ -63,10 +63,6 @@ function create(req, res){
 
 }
 
-
-
-
-
 function show(req, res){
     Book.findById(req.params.id, function(err, book){
         
@@ -127,7 +123,7 @@ function shopBook(req, res){
    .populate(`books`)
    .exec(function(err, shop){
     res.render('books/shop',{
-        title: 'SHOPPING CART', shop
+        title: 'FAVOURITE LIST', shop
    })
        
         

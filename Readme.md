@@ -33,11 +33,13 @@ https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
 
 
 ### Screenshots:
-![HomePage](https://i.imgur.com/oCp3xiw.png)
+![HomePage](https://i.imgur.com/RRNzWPt.png)
 
-![AddABook](https://i.imgur.com/U20OJJd.png)
+![AddABook](https://i.imgur.com/15yqt4s.png)
 
-![DetailsPage](https://i.imgur.com/TAz9bE2.png)
+![FavouriteBook](https://i.imgur.com/4T9Tf57.png)
 
-![ReviewList](https://i.imgur.com/4EJGHaH.png)
+![BookDetails](https://i.imgur.com/XCzw7dU.png)
+
+![ReviewList](https://i.imgur.com/3SAFNzf.png)
 
