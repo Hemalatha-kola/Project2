@@ -9,6 +9,14 @@
     <div>Cost:</div>
      <div><%= book.price %> </div> 
 
+     <div>Details:</div>
+  <ul>
+    <%- book.details.map(b => 
+      `<li>${b.fav} </li>`
+    ).join('') %>
+  </ul>
+
+
      <% if (user && user._id.equals(book.user)) { %>
       <div class="card-body">
           <a href="/books/<%= book._id %>/edit" class="card-link">Edit Book</a>
@@ -18,7 +26,14 @@
    
 </section>
 
-
+<form id="add-per-to-details" action="/books/<%= book._id %>/favBooks" method="POST">
+  <select name="favBookId">
+    <%- favBooks.map(p => 
+      `<option value="${p._id}">${p.fav}</option>`
+    ).join('') %>
+  </select>
+  <button type="submit">Add to Details</button>
+</form>
 
 
 

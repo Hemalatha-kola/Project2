@@ -24,7 +24,11 @@ const bookSchema = new Schema({
         ref: "User" 
     },
     userName: String,
-    userAvatar: String
+    userAvatar: String,
+    details: [{
+        type: Schema.Types.ObjectId,
+        ref: 'FavBook'
+    }]
 
 },{
     timestamps:true

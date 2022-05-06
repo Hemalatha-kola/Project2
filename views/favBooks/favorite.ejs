@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+
+<section id="badge-container">
+  <% favBooks.forEach(function(p) { %>
+    <article class="badge"><%= p.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-favBook-form" action="/favBooks" method="POST">
+  <label>Details:</label>
+  <input type="text" name="fav">
+ 
+  <input type="submit" value="Add Details">
+</form>
+
+<%- include('../partials/footer') %>

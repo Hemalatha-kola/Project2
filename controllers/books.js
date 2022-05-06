@@ -40,12 +40,15 @@ function create(req, res){
 }
 
 function show(req, res){
-    Book.findById(req.params.id, function(err, book){
+    Book.findById(req.params.id).populate('details').exec(function(err, book){
+        Shop.find({_id:{$nin: book.details}})
+        .sort('fav').exec(function(err,favBooks){
+            res.render('books/show',{
+                title: 'Book Details', book, favBooks
+            
+            });
+        })
         
-        res.render('books/show',{
-            title: 'Book Details', book
-        
-        });
         
     });
 }
