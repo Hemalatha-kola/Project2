@@ -9,7 +9,7 @@
     <div>Cost:</div>
      <div><%= book.price %> </div> 
 
-     <div>Details:</div>
+     <div>Genre:</div>
   <ul>
     <%- book.details.map(b => 
       `<li>${b.fav} </li>`
@@ -32,7 +32,7 @@
       `<option value="${p._id}">${p.fav}</option>`
     ).join('') %>
   </select>
-  <button type="submit">Add to Details</button>
+  <button type="submit">Add to Genre</button>
 </form>
 
 
