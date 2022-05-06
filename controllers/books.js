@@ -15,7 +15,6 @@ module.exports = {
    
 }
 
-
 function index(req, res) {
     Book.find({}, function(err, books) {
       res.render('books/index', { title: 'World Of Wonders', books });
@@ -51,8 +50,6 @@ function show(req, res){
     });
 }
 
-
-
 function createShop(req, res ){
   const cart = new Shop(req.body);
  //cart.books.push(req.body)
@@ -71,7 +68,7 @@ function shopBook(req, res){
     res.render('books/shop',{
         title: 'FAVOURITE LIST', shop
    })
-       
+    
         
         });
         
