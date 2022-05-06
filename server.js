@@ -14,7 +14,7 @@ var methodOverride = require('method-override');
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
 var reviewsRouter = require('./routes/reviewbooks');
-var shopsRouter = require('./routes/shops');
+var shopsRouter = require('./routes/favBooks');
 var editsRouter = require('./routes/edit');
 
 var app = express();

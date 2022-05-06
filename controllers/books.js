@@ -1,7 +1,7 @@
 const { useColors } = require('debug/src/browser');
 const { find } = require('../models/book');
 const Book = require('../models/book');
-const Shop = require('../models/shop');
+const Shop = require('../models/favBook');
 
 const User = require('../models/user');
 
