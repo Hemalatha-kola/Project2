@@ -27,7 +27,8 @@ https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
 ### Next Steps:
 <ul>
     <li>As a Signed-In-User, I want to be able to add  reactions to other Users reviews.</li>
-    <li> I want to make this Book Reviews API to Shopping Book API</li>
+    <li> Make app mobile friendly</li>
+    
 </ul>
 
 
