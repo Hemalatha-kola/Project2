@@ -1,6 +1,9 @@
+const { useColors } = require('debug/src/browser');
 const { find } = require('../models/book');
 const Book = require('../models/book');
 const Shop = require('../models/shop');
+
+const User = require('../models/user');
 
 module.exports = {
     index,
@@ -9,8 +12,32 @@ module.exports = {
     show,
     createShop,
     shopBook,
-    
+    edit,
+    update
 }
+
+
+
+    
+function edit(req, res) {
+    Book.findById(req.params.id, function(err, editbook) {
+        console.log(err);
+        res.render("books/edit", {editbook});
+    })
+};
+function update(req, res) {
+    
+    Book.findByIdAndUpdate(
+        
+         req.params.id,
+        req.body,
+         {new: true},
+         function(err, book) {
+             console.log("update",req.params.id)
+             res.redirect(`/books/${book._id}`);
+         }
+     )
+ };
 
 function index(req, res) {
     Book.find({}, function(err, books) {
@@ -51,10 +78,41 @@ function show(req, res){
     });
 }
 
-function createShop(req, res ){
-    console.log("+++++++++")
+// function createShop(req, res ){
+//     console.log("+++++++++", req.query)
+//     Shop.find({user : req.user.id}, function(err, currentUserShop){
+//         req.query.books.id = req.params.id;
+//   if (!currentUserShop.length){
+      
+//     const cart = new Shop();
     
-        const cart = new Shop(req.body);
+//     console.log("cart +_+_+_+_",cart)
+//     cart.user.push(req.user.id);
+//     cart.books.push(req.query)
+
+
+//  cart.save();
+//   }else{
+      
+//     console.log("cart ========", currentUserShop)
+//     console.log("request body", req.query)
+//     currentUserShop.books.push(req.query)
+
+//   currentUserShop.save(function(err){
+//     if(err) return res.redirect('/books');
+//     res.redirect(`/shop`);
+// });
+
+//   }
+
+ 
+//     })
+        
+ 
+
+// }
+function createShop(req, res ){
+  const cart = new Shop(req.body);
  //cart.books.push(req.body)
    cart.save(function(err){
         if(err) return res.redirect('/books');
@@ -64,9 +122,10 @@ function createShop(req, res ){
 }
 
 function shopBook(req, res){
-    console.log("#######", )
-   Shop.find({}).populate(`books.body`).exec(function(err, shop){
-    console.log("heloo+++++++", shop);
+    
+   Shop.find({})
+   .populate(`books`)
+   .exec(function(err, shop){
     res.render('books/shop',{
         title: 'SHOPPING CART', shop
    })
@@ -76,18 +135,5 @@ function shopBook(req, res){
         
    
 }
-// function update(req, res) {
-//     Book.findOneAndUpdate(
-//       {_id: req.params.id, user:req.user._id},
-//       req.body,
-//       {new: true},
-     
-//       function(err, book) {
-        
-//         if (err || !book) return res.redirect('/books');
-//         res.redirect(`/books/${book._id}`);
-//       }
-//     );
-//   }
 
 

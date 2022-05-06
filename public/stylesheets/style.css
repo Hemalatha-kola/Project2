@@ -68,8 +68,15 @@ nav > a.active {
  
 }
 #newform > label{
-  font-size: 30px;
+  font-size: 40px;
   color:aqua;
+}
+#newform input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
+  font-size: 25px;
+  color:blue;
 }
 .header{
   font-size: 60px;
@@ -128,6 +135,21 @@ table td {
 #showpage div:nth-child(even) {
   font-weight: bold;
 }
+#addShowPage1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  
+}
+
+#addShowPage1 div{
+  color:aqua;
+  font-size: 30px;
+}
+
+#addShowPage1 div:nth-child(even) {
+  font-weight: bold;
+}
 
 #shopCart  div{
   display: grid;
@@ -139,6 +161,12 @@ table td {
   color:rgb(104, 210, 139);
   font-size: 30px;
 }
+
+#shopCart button{
+  color:darkmagenta;
+  font-size: 30px;
+}
+
 #add-review-form{
   display: grid;
   grid-template-columns: auto auto;

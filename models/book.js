@@ -18,8 +18,13 @@ const bookSchema = new Schema({
     author: String,
    
     price: {type:Number, min:1, max:9999, default:5},
-    reviews: [reviewSchema]
-   
+    reviews: [reviewSchema],
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User" 
+    },
+    userName: String,
+    userAvatar: String
 
 },{
     timestamps:true
