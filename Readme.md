@@ -5,22 +5,37 @@ Books Review is a place where User can add their favorite Books list to the site
 
 
 ### Link to the Site:
-https://oandasan-games-review.herokuapp.com/
+https://myk-books-shop.herokuapp.com/books
 
 ### Technologies Used:
-HTML, CSS, Javascript, Node.js, MongoDB, Mongoose, Express, Google OAuth, Heroku, Github
+    HTML,
+    CSS,
+    Javascript,
+    Node.js,
+    MongoDB, 
+    Express, 
+    Google OAuth, 
+    Heroku, 
+    Github
 
 ### Trello Board:
-https://trello.com/b/SadgzZzc/seir-oandasan-project-2-trello-board
+https://trello.com/b/mF3sCZxE/project2#
 
 ### Next Steps:
 <ul>
-    <li>As a Signed-In-User, I want to be able to add in reactions to other Users reviews.</li>
-    <li>As a User, I want there to be a chat filter, that filters out profanity.</li>
-    <li>As a User, I want to be able to reverse the sort functions</li>
+    <li>As a Signed-In-User, I want to be able to add  reactions to other Users reviews.</li>
+    <li> I want to make this Book Reviews API to Shopping Book API</li>
 </ul>
 
 ### ERD:
-<td> <img src="https://i.imgur.com/cLjTLW1.jpg" width:"450"> </td>
+https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
 
 ### Screenshots:
+https://i.imgur.com/oCp3xiw.png 
+
+https://i.imgur.com/U20OJJd.png
+
+https://i.imgur.com/TAz9bE2.png
+
+https://i.imgur.com/4EJGHaH.png
+

@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <section id="showpage">
- <form id ="addShowPage1" action="/books/<%= book._id %>/shops" method="GET">
+ 
   <div>Title:</div>
   <div><%= book.title %></div> 
    <div>Author:</div>
@@ -14,8 +14,8 @@
           <a href="/books/<%= book._id %>/edit" class="card-link">Edit Book</a>
       </div>
       <% } %>
-      <a href="/books/<%= book._id %>/shops"><button>ADD TO CART</button></a>
-    </form>
+      
+    
 </section>
 
 
