@@ -21,14 +21,15 @@ https://myk-books-shop.herokuapp.com/books
 ### Trello Board:
 https://trello.com/b/mF3sCZxE/project2#
 
+### ERD:
+https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
+
 ### Next Steps:
 <ul>
     <li>As a Signed-In-User, I want to be able to add  reactions to other Users reviews.</li>
     <li> I want to make this Book Reviews API to Shopping Book API</li>
 </ul>
 
-### ERD:
-https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
 
 ### Screenshots:
 ![HomePage](https://i.imgur.com/oCp3xiw.png)
