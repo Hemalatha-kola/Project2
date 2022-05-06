@@ -2,6 +2,7 @@ const { useColors } = require('debug/src/browser');
 const { find } = require('../models/book');
 const Book = require('../models/book');
 const Shop = require('../models/favBook');
+const List = require('../models/shop');
 
 const User = require('../models/user');
 
@@ -65,11 +66,11 @@ function createShop(req, res ){
 
 function shopBook(req, res){
     
-   Shop.find({})
+   List.find({})
    .populate(`books`)
-   .exec(function(err, shop){
+   .exec(function(err, list){
     res.render('books/shop',{
-        title: 'FAVOURITE LIST', shop
+        title: 'FAVOURITE LIST', list
    })
     
         
