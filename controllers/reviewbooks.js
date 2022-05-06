@@ -30,6 +30,13 @@ function deleteReview(req, res, next) {
     });
   }
 
+  function edit(req, res) {
+    Book.findOne({_id: req.params.id, user: req.user._id}, function(err, book) {
+      if (err || !book) return res.redirect('/books');
+      res.render('books/edit', {book});
+    });
+  }
+
   function update(req, res) {
     Book.findOneAndUpdate(
       {_id: req.params.id, user: req.user._id},
@@ -48,6 +55,7 @@ function deleteReview(req, res, next) {
 module.exports = {
     create,
     delete: deleteReview,
+    edit,
     update
     
     }
