@@ -31,11 +31,11 @@ https://trello.com/b/mF3sCZxE/project2#
 https://whimsical.com/erd-for-project2-3Z4nD1xCr2jT3cFJbMmcwc
 
 ### Screenshots:
-https://i.imgur.com/oCp3xiw.png 
+![HomePage](https://i.imgur.com/oCp3xiw.png)
 
-https://i.imgur.com/U20OJJd.png
+![AddABook](https://i.imgur.com/U20OJJd.png)
 
-https://i.imgur.com/TAz9bE2.png
+![DetailsPage](https://i.imgur.com/TAz9bE2.png)
 
-https://i.imgur.com/4EJGHaH.png
+![ReviewList](https://i.imgur.com/4EJGHaH.png)
 
