@@ -19,9 +19,6 @@
 </section>
 
 
-
-
-
 <br><br>
 <h2>Reviews</h2>
 
@@ -65,6 +62,11 @@
           <% if (user && user._id.equals(r.user)) { %>
             <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
               <button type="submit">X</button>
+            </form>
+            <form action="/reviews/<%= r._id %>?_method=PUT" method="POST">
+              <!-- Value attribute is being set to the comment's current text -->
+              <input name="reviewtext" value="<%= r.reviewtext %>">
+              <button type="submit">UPDATE REVIEW</button>
             </form>
           <% } %>
           

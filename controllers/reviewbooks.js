@@ -17,7 +17,6 @@ function create(req, res){
 }
 
 
-
 function deleteReview(req, res, next) {
    Book.findOne({'reviews._id': req.params.id}).then(function(book) {
       const review = book.reviews.id(req.params.id);
@@ -30,11 +29,25 @@ function deleteReview(req, res, next) {
       });
     });
   }
+
+  function update(req, res) {
+    Book.findOneAndUpdate(
+      {_id: req.params.id, user: req.user._id},
+     
+      req.body,
+      
+      {new: true},
+      function(err, book) {
+        if (err || !book) return res.redirect('/books');
+        res.redirect(`/books/${book._id}`);
+      }
+    );
+  }
   
 
 module.exports = {
     create,
     delete: deleteReview,
-    
+    update
     
     }
