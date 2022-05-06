@@ -78,6 +78,11 @@ nav > a.active {
   font-size: 25px;
   color:blue;
 }
+#newform input[type="text"] {
+
+  font-size: 25px;
+  color:blue;
+}
 .header{
   font-size: 60px;
 }
